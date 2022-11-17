@@ -9,9 +9,14 @@ const todoReducer = createSlice({
     initialState : init,
     reducers : {
         addTodo : (state,action) => {
-            state.todoList.push(action.payload)
+            const newTodo = {
+                text : action.payload,
+                id : Date.now().toString(36)
+            }
+            state.todoList.push(newTodo)
         },
         deleteTodo : (state,action) => {
+            console.log(action)
             state.todoList = state.todoList.filter(item => item.id !== action.payload)
         }
     }

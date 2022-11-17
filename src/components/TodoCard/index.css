@@ -1,0 +1,16 @@
+.todoCard-container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.todoCard-wrapper{
+    width: 100%;
+    background-color: aqua;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2rem ;
+}
