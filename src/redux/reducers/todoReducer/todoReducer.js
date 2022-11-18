@@ -13,7 +13,7 @@ const todoReducer = createSlice({
                 text : action.payload,
                 id : Date.now().toString(36)
             }
-            state.todoList.push(newTodo)
+            state.todoList.push(newTodo)            
         },
         deleteTodo : (state,action) => {
             console.log(action)

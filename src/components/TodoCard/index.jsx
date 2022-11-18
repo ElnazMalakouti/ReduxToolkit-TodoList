@@ -8,10 +8,12 @@ const TodoCard = ({text,id}) => {
 
 
     return(
-        <div className="todoCard-container">
-            <div className="todoCard-wrapper">
-                <p>{text}</p>
-                <button onClick={()=> dispatch(deleteTodo(id))}>delete</button>
+        <div className="w-full flex flex-col gap-[1.5rem] items-center justify-center">
+            <div className="w-[60%] flex flex-col gap-[1.5rem] pt-2">
+                <div className="w-full text-[18px] bg-gray-400 text-black flex flex-row justify-between p-[1rem] rounded-2xl">
+                    <p>{text}</p>
+                    <button onClick={()=> dispatch(deleteTodo(id))}>delete</button>
+                </div>
             </div>
         </div>
     )

@@ -13,8 +13,11 @@ function App() {
   return (
     <div className="App">
       {console.log(todolist)}
-      <input value={inputVal} onChange={e => setInputVal(e.target.value)}/>
-      <button onClick={()=> dispatch(addTodo(inputVal))}>add</button>      
+      <input className='p-2' value={inputVal} onChange={e => setInputVal(e.target.value)}/>
+      <button onClick={()=> {
+        dispatch(addTodo(inputVal))
+        setInputVal("")
+        }}>add</button>      
       {todolist.map(item => {
         return <TodoCard
         text={item.text}
